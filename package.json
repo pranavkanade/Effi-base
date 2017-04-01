@@ -1,0 +1,57 @@
+{
+  "name": "effi-base",
+  "main": "./lib/effi-base",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationCommands": {
+    "atom-workspace": "effi-base:toggle"
+  },
+  "repository": "https://github.com/pskanade/effi-base",
+  "license": "MIT",
+    "engines": {
+      "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {
+      "atom-linter": "^9.0.0",
+      "atom-package-deps": "^4.0.1",
+      "clang-flags": "^0.2.2"
+    },
+    "scripts": {
+      "test": "apm test",
+      "lint": "eslint ."
+    },
+    "providedServices": {
+      "linter": {
+        "version": {
+          "1.0.0": "provideLinter"
+        }
+      }
+    },
+    "devDependencies": {
+      "eslint": "^3.13.0",
+      "eslint-config-airbnb-base": "^11.0.1",
+      "eslint-plugin-import": "^2.2.0"
+    },
+    "package-deps": [
+      "linter"
+    ],
+    "eslintConfig": {
+      "extends": "airbnb-base",
+      "rules": {
+        "global-require": "off",
+        "import/no-unresolved": [
+          "errors",
+          {
+            "ignore": ["atom"]
+          }
+        ]
+      },
+      "globals": {
+        "atom": true
+      },
+      "env": {
+        "browser": true,
+        "node": true
+      }
+    }
+  }

@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle effi-base",
+        "command": "effi-base:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "effi-base",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "effi-base:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
