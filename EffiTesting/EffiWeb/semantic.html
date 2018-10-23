@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Effi WebApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>EFFI</h1>
+  <p><span>A static tool to measure programmer's efficiency</span></p>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <h3>Semantic Analysis</h3>
+
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
+
+    <script src="js/semantic.js"></script>
+    </div>
+    <div class="col-sm-1 col-md-offset-1">
+      <h3>Other Analysis</h3>
+      <div class="container"> 
+  <table class="table borderless">
+    <tbody>
+      <tr> 
+        <td class="borderless">
+        <form action="http://localhost:8000/EffiWeb/index.html"  method="get" id="overallreport">
+    </form>
+        <div class="col-sm-5"><button type="submit" class="btn btn-primary btn-block" form="overallreport" value="Submit">overall report</button></div>
+        </td>
+      </tr>
+      <tr> 
+        <td class="borderless">
+        <form action="http://localhost:8000/EffiWeb/sessionReport.html"  method="get" id="sessionreport">
+    </form>
+        <div class="col-sm-5"><button type="submit" class="btn btn-primary btn-block" form="sessionreport" value="Submit">Recent Session</button></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="borderless">
+        <form action="http://localhost:8000/EffiWeb/dayReport.html"  method="get" id="dayreport">
+    </form>
+        <div class="col-sm-5"><button type="submit" class="btn btn-primary btn-block" form="dayreport" value="Submit">Recent Sessions for whole day</button></div></td>
+      </tr>
+      <tr>
+        <td class="borderless">
+          <div class="col-sm-5"><a href="http://localhost:8000/EffiWeb/semantic.html"><button type="button" class="btn btn-primary btn-block" form="semantic" value="Submit">Semantic Analysis</button></a></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="borderless"><div class="col-sm-5"><button type="button" class="btn btn-primary btn-block">Sessions of whole Month</button></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+    </div>
+  </div>
+  </div>
+  <div class="row" style="margin-top: 40px">
+  <div class="col-sm-12">
+ 
+  <div class="container">
+  <h2>Suggestions to correct semantic mistakes</h2>
+  <table class="table" id="semCorrectionTable">
+    <thead>
+      <tr>
+        <th>Suggestion</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+  </div>
+  </div>
+  </body>
+  </html>
